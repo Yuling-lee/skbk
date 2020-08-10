@@ -1,0 +1,245 @@
+/* pages/means/means.wxss */
+page{
+  background: #ededf1;
+  padding-bottom: 200rpx;
+}
+.banner_bk{
+  width:750rpx;
+  height:340rpx;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+.my_tip{
+  width:603rpx;
+  height:55rpx;
+  background: #c84342;
+  border-radius:27rpx;
+  text-align: center;
+  margin:32rpx auto 27rpx;
+  line-height:55rpx;
+  font-size:24rpx;
+  color: #fff;
+}
+.book_wrap{
+  width:640rpx;
+  background: #fff;
+  border-radius:15rpx;
+  margin:0 auto;
+  padding:35rpx 35rpx 0 35rpx;
+  position: relative;
+}
+.change_btn{
+  font-size:30rpx;
+  color: #333;
+  background:none;
+  border:none;
+  display: inline-block;
+  padding:0;
+  padding-right:30rpx;
+  line-height:34rpx;
+  height:34rpx;
+  margin:0;
+  margin-top:21rpx;
+  position: absolute;
+  right:20rpx;
+  top:14rpx;
+}
+.change_btn::after{
+  background:none;
+  border:none;
+}
+.book_wrap_title{
+  border-left:6rpx solid #333333;
+  height:32rpx;
+  line-height:32rpx;
+  font-size:28rpx;
+  padding-left:15rpx;
+  margin-bottom:20rpx;
+  font-weight:bold;
+}
+.hot_list{
+  width:640rpx;
+  margin:0 auto;
+  display:-webkit-fex;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  padding-top:20rpx;
+}
+.hot_list .hot_item{
+  width:187rpx;
+  margin-bottom:50rpx;
+  margin-right:40rpx;
+  position: relative;
+}
+.hot_list .hot_item:nth-of-type(3n){
+   margin-right:0;
+}
+.hot_list .hot_item image.bookImg{
+  width:187rpx;
+  height:217rpx;
+  border-radius:10rpx;
+}
+.hot_list .hot_item text{
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  font-size:28rpx;
+  color: #333;
+}
+.hot_list .hot_item button.read_btn{
+  display:block;
+  padding:0;
+  background:#d32423;
+  width:170rpx;
+  font-size:26rpx;
+  height:51rpx;
+  line-height:51rpx;
+  min-height:auto;
+  border:none;
+  margin:0 auto;
+  color: #fff;
+  border-radius:10rpx;  
+}
+.hot_list .hot_item button.read_btn::after{
+  border:none;
+  background: none;
+}
+.hot_list .hot_item button.read_btn.active{
+  background:#ededf1;
+  color: #333;
+}
+.add_btn{
+  padding:0;
+  width:40rpx;
+  height:40rpx;
+  border:2px solid #ededf1;
+  border-radius:50%;
+  position: absolute!important;
+  right:5rpx;
+  top:5rpx;
+  background: #fff;
+  z-index: 222;
+  position: relative;
+}
+.add_btn image{
+  width:56rpx;
+  height:40rpx;
+  position: absolute;
+  left:0;
+  top:-7rpx;
+  display:none;
+}
+.add_btn.active{
+  border:1px solid #d32423;
+}
+.add_btn.active image{
+  display: block;
+}
+.add_btn::after{
+  border:none;
+}
+
+
+.course_wrap{
+  width:640rpx;
+  background: #fff;
+  border-radius:15rpx;
+  margin:30rpx auto;
+  padding:35rpx;
+  position: relative;
+}
+.course_title_icon{
+  width:82rpx;
+  height:81rpx;
+  position: absolute;
+  right:0;
+  top:0;
+}
+.course_wrap_title{
+  border-left:6rpx solid #333333;
+  height:32rpx;
+  line-height:32rpx;
+  font-size:28rpx;
+  padding-left:15rpx;
+  margin-bottom:20rpx;
+  font-weight:bold;
+}
+.course_con{
+  display: flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+  flex-direction:row;
+}
+.course_left{
+  width:324rpx;
+  height:176rpx;
+}
+.course_left image{
+  width:324rpx;
+  height:176rpx;
+  padding-top:20rpx;
+}
+.course_right{
+  width:320rpx;
+  padding-left: 35rpx;
+}
+.course_right view{
+  display: inline-block;
+  font-size:23rpx;
+  line-height:34rpx;
+  margin-bottom:14rpx;
+}
+.course_right view text{
+  display: inline-block;
+  margin:0 5rpx;
+  color: #d32423;
+  font-weight:bold;
+}
+
+.bottom_bar_wrap{
+  width:100%;
+  background: #d32423;
+  height:120rpx;
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index:999;
+  display:flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+   border-radius:10rpx 10rpx 0 0;
+   overflow: hidden;
+}
+.bottom_bar_wrap.active{
+  -webkit-animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
+}
+.bottom_bar_wrap .bar_wrap_con{
+  width:50%;
+  height:120rpx;
+  line-height:120rpx;
+  text-align: center;
+  color: #fff;
+  font-size:40rpx;
+}
+.bottom_bar_wrap .bar_wrap_con.bar_wrap_left{
+  background:#a29797;
+}
+.bottom_bar_wrap .bar_wrap_con.bar_wrap_right text{
+  display: inline-block;
+  padding:0 5px;
+  height:40rpx;
+  background: #fff;
+  border-radius:20rpx;
+  text-align: center;
+  color: #d32423;
+  vertical-align: middle;
+  margin-left:10rpx;
+  line-height:40rpx;
+  font-weight:normal;
+  font-size:40rpx;
+}

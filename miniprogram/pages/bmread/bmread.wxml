@@ -1,0 +1,13 @@
+<navigation id='Navigation' title="" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="gg_wrap" style="background-image: url('{{img_url}}')"></view>
+<view class="cover_wrap" >
+   <view class="cover_btn">
+       <image src="https://sahd.offcn.com/cq/skbk/get_btn.png" class="getbtns" bindtap="goRead" hidden="{{!userInfo.isLoaded}}"></image>
+       <button 
+          hidden="{{userInfo.isLoaded}}"
+          open-type="getPhoneNumber"
+          bindgetphonenumber="bindGetPhoneNumber">
+            <image src="https://sahd.offcn.com/cq/skbk/get_btn.png" class="getbtns"></image>
+       </button>
+   </view>
+</view>

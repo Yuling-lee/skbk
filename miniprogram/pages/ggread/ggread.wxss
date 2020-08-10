@@ -1,0 +1,37 @@
+page{
+  background: #fffdf8;
+}
+.gg_wrap{
+  position: fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:750rpx 1420rpx;
+}
+.cover_wrap{
+  position: fixed;
+  left:0;
+  bottom:0;
+  height:407rpx;
+  width:750rpx;
+  background:url(https://sahd.offcn.com/xbk/gg_cover.png) no-repeat center top;
+  background-size:750rpx 407rpx;
+  padding-top:1px;
+}
+.getbtns{
+  display: block;
+  width:381rpx;
+  height:78rpx;
+  margin:200rpx auto 0;
+}
+button{
+  background:none;
+  outline:none;
+}
+button::after{
+  border:none;
+  background:none;
+}

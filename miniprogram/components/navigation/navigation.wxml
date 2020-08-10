@@ -1,0 +1,15 @@
+<view style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px">
+  <view class="header" style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px;background:{{bgcolor}};">
+    <view wx:if="{{showIcon}}" class="title-bar">
+      <view class="back" bindtap="headerBack">
+         <text class="iconfont icon-left icon_title" style="color:{{wordcolor}}"></text>
+      </view>
+      <view class="line"></view>
+      <view class="home" bindtap="headerHome">
+          <text class="iconfont icon-home  icon_title" style="color:{{wordcolor}}"></text>
+      </view>
+    </view>
+    <view wx:if="{{showTitle}}" class="header-title" style="color:{{wordcolor}}">{{title}}</view>
+		<view wx:if="{{showSearch}}" class="search-box" bindtap="headerSearch"><image src="./img/search.png"></image><text>搜索你关注的内容</text></view>
+  </view>
+</view>

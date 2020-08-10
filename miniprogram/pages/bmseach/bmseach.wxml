@@ -1,0 +1,13 @@
+<!--bmseach.wxml-->
+<navigation id='Navigation' title="" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="container"></view>
+<view class="data-wrap" hidden="{{!isShow}}">
+  <image src="../../images/btn.png" class="data-btn" bindtap="gobm" data-url="./../baoming/baoming"></image>
+  <text class="data-end">{{endDate}}</text>
+  <view class="data-view">
+    <view wx:for="{{total}}" wx:key="index">
+      <text class="num">{{item.datanum}}人</text>
+      <text class="txt">{{item.dataname}}</text>
+    </view>
+  </view>
+</view>

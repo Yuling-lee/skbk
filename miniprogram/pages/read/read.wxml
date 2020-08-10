@@ -1,0 +1,3 @@
+<view>
+   <web-view src="{{readurl}}"></web-view> 
+</view>

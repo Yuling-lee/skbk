@@ -1,0 +1,32 @@
+<wxs module="filter" src="./numberToFixed.wxs"></wxs>
+
+<navigation id='Navigation' title="查询结果" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="banner_bk"></view>
+<view class="my_tip">
+  <text>本系统数据仅为参考，请以官方公布结果为准！</text>
+</view>
+<view class="result_num">
+  <text class="result_nux">查询结果如下</text>
+  <button class="change_btn" bindtap="go_search">修改条件</button>
+</view>
+<view class="resultWrap">
+    <block wx:for="{{result}}" wx:key="index">
+      <view data-index="{{index}}">
+        <view class="resultLine resultLine1">{{item.diqu}}>{{item.dw_name}}</view>
+        <view class="resultLine resultLine2">岗位名称：<text>{{item.gw_name}}</text></view>
+        <view class="resultLine">学历：<text>{{item.xueli}}</text></view>
+        <view class="resultLine">专业：<text>{{item.zy}}</text></view>
+        <view class="resultLine">职务层次：<text>{{item.zwcc}}</text></view>
+        <view class="resultLine">2年基层工作经验：<text>{{item.gzjl}}</text></view>
+        <view class="resultLine">政治面貌：<text>{{item.zzmm}}</text></view>
+        <view class="resultLine">其他要求：<text>{{item.other}}</text></view>
+        <view class="resultLine resultLine2 last">招录人数：<text>{{item.zlrs}}</text></view>
+        <view class="resultLine resultLine2">报名人数：<text>--</text></view>
+        <view class="resultLine resultLine2">审核通过人数：<text>--</text></view>
+        <view class="resultLine resultLine2">缴费人数：<text>{{item.jfrs}}</text></view>
+        <view class="resultLine resultLine2">岗位竞争比：<text>{{filter.numberToFixed(item.jfrs/item.zlrs)}}:1</text></view>
+      </view>
+    </block>
+</view>
+
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}' bind:user_login="user_login"></authorization>

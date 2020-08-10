@@ -1,0 +1,36 @@
+<!--pages/means/means.wxml-->
+<navigation id='Navigation' title="我的书架" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk.png" class="banner_bk"></image>
+<view class="my_tip">
+  重庆公务员考试·中公学员内部复习资料
+</view>
+<view class="book_wrap">
+   <view class="book_wrap_title">我的书架</view>
+   <button class="change_btn" bindtap="go_editor">{{!showEditor?'管理':'完成'}}</button>
+   <view class="hot_list">
+      <view class="hot_item"  bindtap="addbook" data-readurl="{{item.bookurl}}" wx:for="{{book_list}}" wx:key="item.picurl" data-index="{{index}}">
+         <image src="{{item.picurl}}" class="bookImg"></image>
+         <text>{{item.bookname}}</text>
+         <button class="read_btn">
+                  点击阅读
+         </button>
+         <button hidden="{{!showEditor}}" class="add_btn {{item.isDelete==true?'active':''}}"  >
+           <image src="./../../images/addr-active.png"></image>
+         </button> 
+      </view>
+      <view class="hot_item" bindtap="go_means">
+              <image src="./../../images/add_pic.png" class="bookImg"></image>
+              <text>添加图书</text>
+        </view>
+   </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
+
+<view class="bottom_bar_wrap  {{showBar?'active':''}}" hidden="{{!showBar}}">
+  <view class="bar_wrap_con bar_wrap_left" bindtap="cancelDelete">
+     取消
+  </view>
+  <view class="bar_wrap_con bar_wrap_right" bindtap="deleteLib">
+     删除<text>{{deleteNum}}</text>
+  </view>
+</view>

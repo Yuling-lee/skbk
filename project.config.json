@@ -1,0 +1,139 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"appid": "wxc5488ac7a45a150c",
+	"projectname": "%E8%81%8C%E4%BD%8D%E6%9F%A5%E8%AF%A2%E5%AE%8C%E6%95%B4%E7%89%88",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/means/means",
+					"pathName": "pages/means/means",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/zwseach/zwseach",
+					"pathName": "pages/zwseach/zwseach",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/result/result",
+					"pathName": "pages/result/result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/answerresult/answerresult",
+					"pathName": "pages/answerresult/answerresult",
+					"query": "source=pyq",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/read/read",
+					"pathName": "pages/read/read",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/zyseach/zyseach",
+					"pathName": "pages/zyseach/zyseach",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/picture/picture",
+					"pathName": "pages/picture/picture",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/picturedetail/picturedetail",
+					"pathName": "pages/picturedetail/picturedetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/ggread/ggread",
+					"pathName": "pages/ggread/ggread",
+					"query": "scene=sjwtgwy",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/picture/picture",
+					"pathName": "pages/picture/picture",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/ggread/ggread",
+					"pathName": "pages/ggread/ggread",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

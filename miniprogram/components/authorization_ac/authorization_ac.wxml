@@ -1,0 +1,11 @@
+<view class="authorization_wrap"  hidden="{{!isShow}}"></view>
+<view class="authorization_show"  hidden="{{!isShow}}">
+      <view class="authorization_close" bindtap="close_auth">
+         <text class="iconfont icon-guanbi"></text>
+      </view>
+     <button class='phone_baocun'
+             open-type ='getUserInfo'  
+             bindgetuserinfo = 'setuserinfo'>
+          <text class="iconfont icon-weixin"></text>获取用户个性头像
+     </button>
+</view>

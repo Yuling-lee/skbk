@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navigation": "/components/navigation/navigation",
+    "authorization": "/components/authorization/authorization",
+    "authorization-ac": "/components/authorization_ac/authorization_ac"
+  },
+  "navigationBarTextStyle": "white"
+}

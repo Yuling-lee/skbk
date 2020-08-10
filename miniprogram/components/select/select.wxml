@@ -1,0 +1,19 @@
+<!--component/select/select.wxml-->
+<view class='select_box_wrap'>
+  <view class="select_box  {{isActive ? 'active' : ''}}">
+    <view class="select_content" bindtap='selectToggle' >
+        <text class="iconfont {{icnoname}} icon_title" ></text>
+        <view class='select_text' style="color:{{textColor}}">{{selectText}}</view>
+        <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+        <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+    </view>
+  </view>
+  <view  class="select_cover "  hidden='{{edDetail}}'></view>
+  <view  class="select_list {{edDetail ? '' : 'active'}} "  hidden='{{edDetail}}' >
+      <image src='/images/ss-colose.png'  class='select_close' bindtap='hideDetail'></image>
+      <scroll-view scroll-y="true"  class="my_scroll">
+        <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='index' class='select_item ' bindtap='setText'>{{item.text}}</view>
+      </scroll-view>
+      <view class="scroll_zw"></view>
+  </view>
+</view>

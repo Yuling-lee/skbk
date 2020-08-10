@@ -1,0 +1,49 @@
+<navigation id='Navigation' title="职位收藏" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk.png" class="banner_bk"></image>
+<view class="my_tip">
+  <text>非精准匹配，尽量覆盖您可能可报的职位，按相关度排序\n如对能否报名有疑虑，请务必致电咨询报考单位！</text>
+</view>
+<view class="result_num">
+  <text class="result_nux">共{{result.length}}条收藏</text>
+  <button class="change_btn" bindtap="go_editor">{{!showEditor?'管理':'完成'}}</button>
+</view>
+<view class="result_list">
+  <block wx:for="{{result}}" wx:key="index">
+    <view class="result_item">
+      <text class="result_code">({{item.item01}}年)</text>
+      <text class="result_name">{{item.item05}}</text>
+      <text class="result_detail">{{item.item03}}>{{item.item04}}>{{item.item07}}>{{item.item05}}</text>
+      <view class="item_group {{showId==index?'active':''}}">
+        <view class="item_line"><label>录用计划</label><text>{{item.item06?item.item06:'无'}}</text></view>
+        <view class="item_line"><label>专业要求</label><text>{{item.item09?item.item09:'无'}}</text></view>
+        <view class="item_line"><label>学历学位</label><text>{{item.item08?item.item08:'无'}}</text></view>
+        <view class="item_line"><label>政治面貌</label><text>{{item.item11?item.item11:'无'}}</text></view>
+        <view class="item_line"><label>性别要求</label><text>{{item.item14?item.item14:'不限'}}</text></view>
+        <view class="item_line"><label>2年基层工作经历</label><text>{{item.item10?item.item10:'无'}}</text></view>
+        <view class="item_line"><label>是否组织专业考试</label><text>{{item.item12?item.item12:'无'}}</text></view>
+        
+        <view class="item_line"><label>其他条件</label><text>{{item.item13?item.item13:'无'}}</text></view>
+        <view class="item_line item_line_fs" v-if="item.item01!=2020">
+            <label>最低进面分数线</label>
+            <text>{{item.item15}}</text>
+        </view>
+      </view>
+      <button hidden="{{!showEditor}}" class="add_btn {{item.isDelete==true?'active':''}}"   bindtap="addEditor" data-index="{{index}}">
+          <image src="./../../images/addr-active.png"></image>
+      </button> 
+      <image src="./../../images/show_more.png" class="show_more" data-index="{{index}}" bindtap="showDetail"></image>
+    </view>
+  </block>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}'  bind:user_login="user_login"></authorization>
+<view class="bottom_bar_wrap {{showBar?'active':''}}"  hidden="{{!showBar}}">
+  <view class="bar_wrap_con bar_wrap_left" bindtap="cancelDelete">
+     取消
+  </view>
+  <view class="bar_wrap_con bar_wrap_right" bindtap="deleteLib">
+     删除<text>{{deleteNum}}</text>
+  </view>
+</view>
+<view class="go_search" bindtap="go_zwsearch">
+   <image src="./../../images/zw_btn.png"></image>
+</view>

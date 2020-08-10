@@ -1,0 +1,193 @@
+/* pages/means/means.wxss */
+page{
+  background: #ededf1;
+  padding-bottom: 50rpx;
+}
+.banner_bk{
+  width:750rpx;
+  height:24%;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+.means_title{
+  width:633rpx;
+  height:104rpx;
+  display: block;
+  margin:0 auto;
+  padding:30rpx 0;
+}
+.book_wrap{
+  width:640rpx;
+  background: #fff;
+  border-radius:15rpx;
+  margin:0 auto;
+  padding:35rpx 35rpx 0 35rpx;
+}
+.book_wrap_title{
+  border-left:6rpx solid #333333;
+  height:32rpx;
+  line-height:32rpx;
+  font-size:28rpx;
+  padding-left:15rpx;
+  margin-bottom:20rpx;
+  font-weight:bold;
+}
+.hot_list{
+  width:640rpx;
+  margin:0 auto;
+  display:-webkit-fex;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  padding-top:20rpx;
+}
+.hot_list .hot_item{
+  width:187rpx;
+  margin-bottom:50rpx;
+  margin-right:40rpx;
+}
+.hot_list .hot_item:nth-of-type(3n){
+   margin-right:0;
+}
+.hot_list .hot_item image{
+  width:187rpx;
+  height:217rpx;
+  border-radius:10rpx;
+}
+.hot_list .hot_item text{
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  font-size:28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.hot_list .hot_item button{
+  display:block;
+  padding:0;
+  background:#d32423;
+  width:170rpx;
+  font-size:26rpx;
+  height:51rpx;
+  line-height:51rpx;
+  min-height:auto;
+  border:none;
+  margin:0 auto;
+  color: #fff;
+  border-radius:10rpx;  
+}
+.hot_list .hot_item button::after{
+  border:none;
+  background: none;
+}
+.hot_list .hot_item button.active{
+  background:#9d0f0e;
+  color: #fff;
+}
+
+.course_wrap{
+  width:640rpx;
+  background: #fff;
+  border-radius:15rpx;
+  margin:30rpx auto;
+  padding:35rpx;
+  position: relative;
+}
+.course_title_icon{
+  width:82rpx;
+  height:81rpx;
+  position: absolute;
+  right:0;
+  top:0;
+}
+.course_wrap_title{
+  border-left:6rpx solid #333333;
+  height:32rpx;
+  line-height:32rpx;
+  font-size:28rpx;
+  padding-left:15rpx;
+  margin-bottom:20rpx;
+  font-weight:bold;
+}
+.course_con{
+  display: flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+  flex-direction:row;
+}
+.course_left{
+  width:324rpx;
+  height:176rpx;
+}
+.course_left image{
+  width:324rpx;
+  height:176rpx;
+  padding-top:20rpx;
+}
+.course_right{
+  width:320rpx;
+  padding-left: 35rpx;
+}
+.course_right view{
+  display: inline-block;
+  font-size:23rpx;
+  line-height:34rpx;
+  margin-bottom:14rpx;
+}
+.course_right view text{
+  display: inline-block;
+  margin:0 5rpx;
+  color: #d32423;
+  font-weight:bold;
+}
+
+.tip_cvover{
+  width:100%;
+  height:227rpx;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.6);
+  border-radius:10rpx 10rpx 0 0;
+  padding-top:1rpx;
+}
+.tip_cvover.active{
+  -webkit-animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
+}
+.tip_cvover .tip_con{
+  width:700rpx;
+  height:92rpx;
+  background: #d32423;
+  margin:0 auto;
+  border-radius:15rpx;
+  margin-top:66rpx;
+  display:flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+}
+.tip_cvover .tip_con .close_tip{
+  width:39rpx;
+  height:39rpx;
+  padding:26.5rpx;
+  margin-left:24rpx;
+}
+.tip_cvover .tip_con .tip_text{
+  width:469rpx;
+  height:92rpx;
+  font-size:32rpx;
+  color: #fff;
+  text-align: center;
+  line-height:92rpx;
+}
+.tip_cvover .tip_con .tip_icon{
+  width:22rpx;
+  height:38rpx;
+  padding:26.5rpx;
+}

@@ -1,0 +1,195 @@
+@import "./../../style/icon.wxss";
+page{
+  background: #ededf1;
+  padding-bottom:240rpx;
+}
+.banner_bk{
+  width:750rpx;
+  height:467rpx;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+  background: #417cfc;
+}
+.nav_top{
+  width:100%;
+  height:44rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  padding-top:60rpx;
+  padding-bottom:30rpx;
+}
+.nav_top .nav_back{
+  width:24rpx;
+  height:44rpx;
+  margin-left:24rpx;
+}
+.nav_top .nav_back image{
+  display:block;
+  width:24rpx;
+  height:44rpx;
+}
+.nav_top  .nav_title{
+  width:637rpx;
+  height:44rpx;
+  line-break:44rpx;
+  font-size: 32rpx;
+  font-weight:bold;
+  text-align:center;
+  color: #fff;
+}
+.my_tip{
+  width:603rpx;
+  height:74rpx;
+  background: #417cfc;
+  border-radius:37rpx;
+  text-align: center;
+  margin:0 auto;
+  line-height:74rpx;
+}
+.my_tip text{
+  display: inline-block;
+  font-size:20rpx;
+  line-height:31rpx;
+  color: #fff;
+  vertical-align:middle;
+}
+.result_num{
+  width:702rpx;
+  margin:0 auto;
+  display:flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+  height:73rpx;
+  line-height:73rpx;
+  padding:10rpx 0;
+}
+.result_nux{
+  font-size:34rpx;
+  font-weight:bold;
+  color: #f5eeb8;
+  padding-left:30rpx;
+  display:inline-block;
+}
+.change_btn{
+  font-size:34rpx;
+  color: #fff;
+  background:none;
+  border:none;
+  display: inline-block;
+  padding:0;
+  padding-right:30rpx;
+  line-height:34rpx;
+  height:34rpx;
+  margin:0;
+  margin-top:21rpx;
+}
+.change_btn::after{
+  background:none;
+  border:none;
+}
+
+.tip_cvover{
+  width:100%;
+  height:227rpx;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  border-radius:10rpx 10rpx 0 0;
+  padding-top:1rpx;
+  z-index:9999999999;
+}
+.tip_cvover.active{
+  -webkit-animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
+}
+.tip_cvover .tip_con{
+  width:700rpx;
+  height:92rpx;
+  background: #417cfc;
+  margin:0 auto;
+  border-radius:15rpx;
+  margin-top:66rpx;
+  display:flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+}
+.tip_cvover .tip_con .close_tip{
+  width:39rpx;
+  height:39rpx;
+  padding:26.5rpx;
+  margin-left:24rpx;
+}
+.tip_cvover .tip_con .tip_text{
+  width:469rpx;
+  height:92rpx;
+  font-size:32rpx;
+  color: #fff;
+  text-align: center;
+  line-height:92rpx;
+}
+.tip_cvover .tip_con .tip_icon{
+  width:22rpx;
+  height:38rpx;
+  padding:26.5rpx;
+}
+
+.nav_title{
+  font-size: 28rpx;
+  color: #3b444e;
+  line-height:28rpx;
+  width:700rpx;
+  margin:0 auto;
+  padding-top:50rpx;
+  font-weight:bold;
+}
+
+.resultWrap{
+  width:620rpx;
+  margin:0 auto;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 40rpx 30rpx;
+}
+.resultWrap .resultLine{
+  line-height: 40rpx;
+  font-size: 24rpx;
+  padding: 6rpx;
+  color: #999;
+}
+.resultWrap .resultLine.resultLine1{
+  background: #eee;
+  color: #666;
+}
+.resultWrap .resultLine.resultLine2{
+  font-weight: bold;
+}
+.resultWrap .resultLine.resultLine2 text{
+  color: #d32423;
+}
+.resultWrap .resultLine.last{
+  border-top: 1px dashed #ddd;
+  margin-top: 10rpx;
+  padding-top: 10rpx;
+}
+.resultWrap .resultLine text{
+  color: #333;
+}
+.add_btn{
+  width:260rpx;
+  height:60rpx;
+  background: #d32423;
+  line-height:60rpx;
+  margin:30rpx auto 0;
+  padding:0;
+  text-align: center;
+  color: #fff;
+  border-radius:30rpx;
+  font-size:28rpx;
+}
+.add_btn::after{
+  border:none;
+}

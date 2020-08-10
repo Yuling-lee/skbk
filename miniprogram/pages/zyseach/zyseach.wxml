@@ -1,0 +1,53 @@
+<navigation id='Navigation' title="专业大类查询"  bgcolor="{{bgcolor}}" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}" navbg="{{navbg}}" class="fix-top" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk1.png" class="banner_bk"></image>
+<view class="container">
+    <view class="nav_title">
+      <image src="./../../images/zy_title.png"></image>
+    </view>
+    <view class="zw_them">
+       根据学历、所学专业进行匹配查询
+    </view>
+    <view class="select_wrap">
+         <view class='offer_item'>
+          <select prop-array='{{xueliList}}' icnoname="icon-xueli1" selectText="学历" stype="3"  bind:m_select_touch="m_select_touch"></select>
+        </view>
+        <view class="offer_item offer_itemx {{inputactive?'active':''}}">
+           <text class="iconfont icon-icon1"></text>
+           <input class="zysearch" placeholder="请输入专业" bindinput="zysearchInput" placeholder-class="phcolor"></input>
+        </view>
+        <view class='offer_item' >
+          <button class="search_btn" bindtap="seach_result">点击查询</button>
+        </view>
+        <view class="tip_show">
+          <view class="tip_title">
+             <text class="iconfont icon-jurassic_message"></text>特别说明
+          </view>
+          <view class="tip_detail">
+            本系统根据官方发布<text>《2015重庆公务员考试专业参考目录（修订）》</text>为参考为您提供查询信息。若不确定自身专业归于哪类或查询不到所学专业，建议咨询招考单位!
+          </view>
+        </view>
+    </view>
+    <view class="result_titles" hidden="{{result.length<=0}}">
+      <text class="iconfont icon-icon-tongji"></text>共{{result.length}}条结果
+    </view>
+    <view class="result_list" hidden="{{result.length<=0}}">
+      <block wx:for="{{result}}" wx:key="index">
+        <view class="result_item">
+          <text class="result_code">学历：{{item.item03}}</text>
+          <text class="result_code">专业：{{item.item02}}</text>
+          <text class="result_detail">所属专业大类:{{item.item01}}</text>
+          <button class="add_btn" data-text="{{item.item03}}" bindtap="copyText">
+           点击复制
+          </button>
+        </view>
+      </block>
+    </view>
+    <view class="result_error" hidden="{{noresult}}">
+       无匹配内容，请输入专业关键词重试！
+    </view>
+    <view class="zw_wrap" data-url='pages/province_search/province_search?data={"zwcode":"cq","zwyear":"2020","area":"cq"}' bindtap="go_zwk" hidden="{{result.length<=0}}">
+          <image src="https://sahd.offcn.com/cq/skbk/zy_gg_pic.png" class="zy_pic"></image>
+    </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
+

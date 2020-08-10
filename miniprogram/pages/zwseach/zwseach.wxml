@@ -1,0 +1,46 @@
+<!--miniprogram/pages/zwseach/zwseach.wxml-->
+<navigation id='Navigation' title="职位查询" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}" navbg="{{navbg}}" class="fix-top" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk1.png" class="banner_bk"></image>
+<!-- <view class="nav_top">
+  <view class="nav_back"><image src="./../../images/left_nav.png"></image></view>
+  <view class="nav_title">选职位</view>
+</view> -->
+<view class="container">
+    <view class="nav_title">
+      <image src="./../../images/cx_title.png"></image>
+    </view>
+    <view class="zw_them">
+       根据工作地区、学历、政治面貌、专业进行匹配查询
+    </view>
+    <view class="select_wrap">
+        <view class='offer_item'>
+          <select prop-array='{{yearList}}' bind:changez="changez" icnoname="icon-rili" selectText="年份" stype="1"  bind:m_select_touch="m_select_touch"></select>
+        </view>
+         <view class='offer_item'>
+          <select prop-array='{{addressList}}' bind:changez="changez" icnoname="icon-dizhi" selectText="工作地点" stype="2" bind:m_select_touch="m_select_touch"></select>
+        </view>
+         <view class='offer_item'>
+          <select prop-array='{{xueliList}}' bind:changez="changez" icnoname="icon-xueli1" selectText="学历" stype="3"  bind:m_select_touch="m_select_touch"></select>
+        </view>
+         <view class='offer_item'>
+          <select prop-array='{{zzmmList}}' bind:changez="changez" icnoname="icon-zhengzhi-tianchong" selectText="政治面貌" stype="4"  bind:m_select_touch="m_select_touch"></select>
+        </view>
+        <view class='offer_item'>
+           <select-earch  selectText="专业类别" bind:changez="changez" stype="5" icnoname="icon-icon1"  bind:m_selectSearch_touch="m_selectSearch_touch"></select-earch>
+        </view>
+        <view class='offer_item'>
+          <button class="search_btn" bindtap="seach_result">点击查询</button>
+        </view>
+    </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
+<view class="tip_cvover showTip {{changeindex?'active':'actives'}}" >
+  <view class="tip_con">
+     <image src="./../../images/tip_icon3.png" class="close_tip" bindtap="close_tip"></image>
+     <text class="tip_text" bindtap="go_target">查看我的职位收藏</text>
+     <image src="./../../images/tip_icon2.png" class="tip_icon" bindtap="go_target"></image>
+  </view>
+</view>
+
+
+

@@ -1,0 +1,240 @@
+page{
+  background: #f2f2f2;
+}
+.banner_bk{
+  width:750rpx;
+  height:360rpx;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+.banner_logo{
+  display:block;
+  width:258rpx;
+  height:58rpx;
+  padding:0 0  0 25rpx;
+  position: absolute;
+  left:0;
+  top:5%;
+}
+.banner_pic{
+  width:722rpx;
+  height:295rpx;
+  display:block;
+  margin:14rpx auto 10rpx;
+}
+.gg_pic{
+  width:722rpx;
+  height:100rpx;
+  display:block;
+  margin:17rpx auto 20rpx;
+}
+
+.banner_mokao{
+  width:678rpx;
+  height:194rpx;
+  display:block;
+  margin:20rpx auto;
+}
+
+.gg_wrap{
+  background: #fff;
+  border-radius:12rpx;
+  width:700rpx;
+  height:337rpx;
+  -moz-box-shadow:0rpx 0rpx 7rpx #d6d7d3;
+  -webkit-box-shadow:0rpx 0rpx 7rpx #d6d7d3;
+  box-shadow:0rpx 0rpx 7rpx #d6d7d3;
+  margin:0 auto;
+  display: flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+}
+.gg_wrap .gg_left{
+  width:344rpx;
+  height:302rpx;
+  margin-left:17rpx;
+  padding-top:20rpx;
+}
+.gg_wrap .gg_left image{
+  width:344rpx;
+  height:302rpx;
+}
+.gg_right{
+  width:305rpx;
+  height:302rpx;
+  padding-top:20rpx;
+  margin-left:17rpx;
+  margin-right:17rpx;
+}
+.gg_right image{
+  width:305rpx;
+  height:142rpx;
+}
+.gg_right image.right_img1{
+  padding-bottom: 12rpx;
+}
+.download_wrap{
+  padding-top:20rpx;
+}
+.download_pic{
+  width:678rpx;
+  height:359rpx;
+  display:block;
+  margin:0 auto;
+  border-radius:10rpx;
+}
+.notice_pic{
+  width:678rpx;
+  height:275rpx;
+  display:block;
+  margin:0 auto;
+  padding-bottom:5rpx;
+  border-radius:10rpx;
+}
+.notice_picx{
+  width:678rpx;
+  height:194rpx;
+  display:block;
+  margin:0 auto;
+  padding-bottom:20rpx;
+  border-radius:10rpx;
+}
+.ggwrap{
+  padding-bottom: 20rpx;
+}
+.ggwrap.active{
+  background:url(http://cq.offcn.com/zg/images/wrap_bk.png) no-repeat center top;
+   background-size: 702rpx 1144rpx;
+   padding-top:83rpx;
+}
+
+
+.ggzq{
+  width:600rpx;
+  background: #fff;
+  margin:0 auto;
+  padding:40rpx 40rpx 10rpx 40rpx;
+  border-radius:10rpx;
+  margin-bottom:20rpx;
+}
+.ggwrap .ggzq_title{
+  height:36rpx;
+  line-height:36rpx;
+  font-size:36rpx;
+  color: #333;
+  font-weight:bold;
+  padding-bottom:32rpx;
+}
+.ggwrap .ggzq_title image{
+  width:32rpx;
+  height:31rpx;
+  margin-right:5px;
+  vertical-align:middle;
+  position: relative;
+  top:-5rpx;
+}
+.ggwrap .ggzq_title text{
+  color: #f22424;
+  font-weight:bold;
+}
+.ggzq_list{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.ggzq_list text{
+  display:block;
+  width:177rpx;
+  height:57rpx;
+  border:1px solid #ce1200;
+  background: #ffeeec;
+  line-height:57rpx;
+  margin-bottom:27rpx;
+  border-radius:29rpx;
+  text-align: center;
+  transition: all 0.3s;
+}
+.ggzq_list text.active{
+  width:180rpx;
+  height:60rpx;
+  background:url(http://cq.offcn.com/zg/images/item_active.png) no-repeat center top;
+  background-size:180rpx 60rpx;
+  color: #fff;
+  border:none;
+}
+
+
+.jrzb{
+  width:600rpx;
+  background: #fff;
+  margin:0 auto;
+  padding:40rpx 40rpx 20rpx 40rpx;
+  border-radius:10rpx;
+}
+.jrzb .jrzb_title{
+  height:36rpx;
+  line-height:36rpx;
+  font-size:36rpx;
+  color: #333;
+  font-weight:bold;
+  padding-bottom:32rpx;
+}
+.jrzb .jrzb_title image{
+  width:35rpx;
+  height:35rpx;
+  margin-right:5px;
+  vertical-align:middle;
+  position: relative;
+  top:-5rpx;
+}
+.jrzb .jrzb_title text{
+  color: #f22424;
+  font-weight:bold;
+}
+.jrzb_list{
+  border-left:1px dashed #dadada;
+}
+.jrzb_item{
+  height:28rpx;
+  margin-bottom:30rpx;
+  display:-webkit-flex;
+  justify-content: space-between;
+  line-height:28rpx;
+}
+.jrzb_item text.text1{
+  display:block;
+  width:14rpx;
+  height:14rpx;
+  background: #dadada;
+  border-radius:50%;
+  margin-left:-8rpx;
+  position: relative;
+  top:9rpx;
+}
+.jrzb_item text.text2{
+  display:block;
+  width:496rpx;
+  height:28rpx;
+  line-height:28rpx;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+.jrzb_item text.text2 text{
+  color: #f22424;
+  margin-left:5rpx;
+  line-height:28rpx;
+  height:28rpx;
+  font-size: 28rpx;
+}
+.jrzb_item  image{
+  width:72rpx;
+  height:31rpx;
+  position: relative;
+  top:-5rpx;
+}

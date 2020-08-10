@@ -1,0 +1,90 @@
+<navigation id='Navigation' title="{{title}}" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk.png" class="banner_bk"></image>
+<view class="user_wrap">
+   <image src="{{tempUserInfo.avatarUrl}}" class="tx_pic" bindtap="avatarAava"></image>
+   <view class="username" bindtap="avatarAava">{{tempUserInfo.nickName}}</view>
+</view>
+<view class="my_books">
+  <view class="my_books_top" bindtap="go_mylib">
+     <view class="books_top_left">
+        <image src="./../../images/my_icon1.png"></image>我的书架
+     </view>
+     <view class="books_top_right">
+        <image src="./../../images/my_iconx.png" ></image>
+     </view>
+  </view>
+  <view class="tip" hidden="{{book_list.length!=0}}" bindtap="go_means">书架是空的，快去添加图书吧</view>
+  <scroll-view scroll-x="true"  class="my_scroll" hidden="{{book_list.length==0}}">
+      <view class="hot_list">
+        <block wx:for="{{book_list}}" wx:key="index">
+            <view class="hot_item" bindtap="addbook" data-readurl="{{item.bookurl}}">
+              <image src="{{item.picurl}}"></image>
+              <text>{{item.bookname}}</text>
+            </view>
+        </block>
+        <view class="hot_item" bindtap="go_means">
+              <image src="./../../images/add_pic.png"></image>
+              <text>添加图书</text>
+        </view>
+      </view>
+  </scroll-view>
+</view>
+<view class="my_zws" bindtap="go_myposi">
+  <view class="my_zws_top">
+     <view class="zws_top_left">
+        <image src="./../../images/my_icon2.png"></image>我的职位收藏
+     </view>
+     <view class="zws_top_right">
+        <image src="./../../images/my_iconx.png"></image>
+     </view>
+  </view>
+  <view class="tip" hidden="{{zw_list.length!=0}}" >职位收藏是空的，快去搜索职位吧</view>
+   <view class="zw_list" hidden="{{zw_list.length==0}}">
+      <block wx:for="{{zw_list}}"   wx:key="index">
+         <view class="zw_item {{index==2?'active':''}}"    wx:if="{{index<=2}}">
+            <text class="result_name">({{item.item01}}年){{item.item07}}  {{item.item05}}</text>
+            <text class="result_detail">{{item.item03}}>{{item.item04}}>{{item.item05}}>{{item.item06}}</text>
+        </view>
+      </block>
+   </view>
+</view>
+<view class="my_item_wrap">
+<button class='contacButton' open-type="share" >
+  <view class="my_item" bindtap="onShareAppMessage"> 
+     <view class="my_item_left">
+        <image src="./../../images/my_icon3.png"></image>分享快乐
+     </view>
+     <view class="my_item_right">
+        <image src="./../../images/my_iconx.png"></image>
+     </view>
+  </view>
+   </button> 
+  <button open-type="contact" class='contacButton'>
+   <view class="my_item">
+     <view class="my_item_left">
+        <image src="./../../images/my_icon4.png"></image>在线客服
+     </view>
+     <view class="my_item_right">
+        <image src="./../../images/my_iconx.png"></image>
+     </view>
+  </view>
+  </button>
+  <view class="my_item last" bindtap="tel">
+     <view class="my_item_left">
+        <image src="./../../images/my_icon5.png"></image>联系我们
+     </view>
+     <view class="my_item_right">
+        400-6300-999<image src="./../../images/my_iconx.png"></image>
+     </view>
+  </view>
+  <!-- <view class="my_item last" bindtap="go_profile">
+     <view class="my_item_left">
+        <image src="./../../images/my_icon6.png"></image>系统说明
+     </view>
+     <view class="my_item_right">
+        <image src="./../../images/my_iconx.png"></image>
+     </view>
+  </view> -->
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
+<authorization-ac isShow='{{isShowAuthAc}}'  bind:user_login_ac="user_login_ac"></authorization-ac>

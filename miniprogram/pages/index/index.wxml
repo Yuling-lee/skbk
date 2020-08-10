@@ -1,0 +1,40 @@
+<navigation id='Navigation' title="{{title}}" showIcon='{{false}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="page_cover">
+   <image src="./../../images/banner_bk.png" class="banner_bk"></image>
+   <image src="./../../images/banner_logo.png" class="banner_logo"></image>
+   <image src="./../../images/banner_pic.png" class="banner_pic" data-url='pages/province_search/province_search?data={"zwcode":"cq","zwyear":"2020","area":"cq"}' bindtap="go_zwk"></image>
+   <image src="./../../images/ggread.png" class="gg_pic" data-url="./../ggread/ggread" bindtap="go_notice"></image>
+   <!-- <view class="notice_wrap"  data-url="/pages/mypicture/mypicture" bindtap="go_notice">          
+          <image src="./../../images/zjz.png" class="notice_picx"></image>
+   </view> -->
+   <view class="ggwrap active">
+     <view class="ggzq">
+        <view class="ggzq_title">
+            <image src="./../../images/ggw_title1.png"></image><text>公告</text>专区
+        </view>
+        <view class="ggzq_list">
+           <text wx:for="{{gg_list}}" class="{{index==nowindex?'active':''}}" wx:key="index" data-url="{{item.gg_url}}" bindtap="gogg">{{item.gg_title}}</text>
+        </view>
+     </view>
+      <view class="jrzb">
+        <view class="jrzb_title">
+            <image src="./../../images/ggw_title2.png"></image>今日<text>直播</text>
+        </view>
+        <view class="jrzb_list">
+           <view class="jrzb_item" wx:for="{{zb_list}}" wx:key="index" data-url="{{item.zb_url}}" bindtap="gozb">
+              <text class="text1"></text>
+              <text class="text2">{{item.zb_time}}<text>{{item.zb_title}}</text></text>
+              <image src="./../../images/listen_btn.png"></image>
+           </view>           
+        </view>
+     </view>
+     
+     <view class="download_wrap"  data-url="/pages/means/means" bindtap="go_notice">
+          <image src="./../../images/download.png" class="download_pic"></image>
+     </view>
+     <view class="download_wrap"  data-url="/pages/shenlun/shenlun" bindtap="go_notice">
+          <image src="./../../images/download1.jpg" class="download_pic"></image>
+     </view>
+   </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>

@@ -1,0 +1,68 @@
+/**bmseach.wxss**/
+button {
+  background: none;
+  outline: none;
+  border: 0;
+}
+button::after{border-width:0;}
+page{
+  background: #417cfc;
+}
+.container{
+  position: fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  background:url(https://sahd.offcn.com/cq/skbk/skbm.jpg) no-repeat center top;
+  background-size:750rpx 1529rpx;
+}
+.data-wrap{
+  width: 100%;
+  position: absolute;
+  height: 430rpx;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.data-btn{
+  width: 343rpx;
+  height: 89rpx;
+  -webkit-animation:bigBtn 2s linear infinite; 
+  animation:bigBtn 2s linear infinite;
+}
+@keyframes bigBtn {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+}
+@-webkit-keyframes bigBtn {
+  0%{-webkit-transform: scale(1);}
+  50% {-webkit-transform: scale(1.1);}
+}
+.data-end{
+ font-size: 30rpx;
+ color: #fff;
+ display: block;
+ line-height: 78rpx;
+ letter-spacing: 1rpx;
+}
+.data-view{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  margin: 60rpx 20rpx 0;
+  text-align: center;
+}
+.data-view .num{
+  font-size: 44rpx;
+  color: #ffe589;
+  display: block;
+  line-height: 56rpx;
+  font-weight: bold;
+}
+.data-view .txt{
+  font-size: 28rpx;
+  color: #fff;
+  display: block;
+  line-height: 50rpx;
+}

@@ -1,0 +1,22 @@
+<view class='select_box_wrap'>
+  <view class="select_box  {{isActive ? 'active' : ''}}">
+    <view class="select_content" bindtap='selectToggle' >
+        <text class="iconfont {{icnoname}} icon_title"></text>
+        <view class='select_text' style="color:{{textColor}}">{{selectText}}</view>
+        <!-- <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+        <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image> -->
+    </view>
+  </view>
+  <view  class="select_cover "  hidden='{{edDetail}}'></view>
+  <view  class="select_list {{edDetail ? '' : 'active'}} "  hidden='{{edDetail}}' >
+      <image src='/images/ss-colose.png'  class='select_close' bindtap='hideDetail'></image>
+      <view class="search_wrap">
+         <text class="iconfont icon-search" ></text>
+         <input placeholder="搜索专业名词" type="text" bindinput='searchList' value="{{inputVal}}"   ></input>
+      </view> 
+      <scroll-view scroll-y="true"  class="my_scroll">
+        <view wx:for="{{showList}}" data-index="{{index}}" wx:key='index' class="select_item {{item.id==0 ? 'active' : ''}}" bindtap='setText'>{{item.name}}</view>
+        <view class="scroll_zw"></view>
+      </scroll-view>
+  </view>
+</view>

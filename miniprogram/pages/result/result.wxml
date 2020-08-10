@@ -1,0 +1,74 @@
+<navigation id='Navigation' title="查询结果" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk.png" class="banner_bk"></image>
+<view class="my_tip">
+  <text>非精准匹配，尽量覆盖您可能可报的职位\n如对能否报名有疑虑，请务必致电咨询报考单位！</text>
+</view>
+<view class="result_num">
+  <text class="result_nux">共{{result.length}}条结果</text>
+  <button class="change_btn" bindtap="go_search">修改条件</button>
+</view>
+<!-- <view class="nav_wrap">
+   <block wx:for="{{navArr}}" wx:key="index">
+      <view class="nav_item {{navInex==index?'active':''}}" data-navindex="{{index}}" bindtap="navClick">
+          {{item}}
+      </view>
+   </block>
+   <view class="nav_item nav_itemx" wx-if='{{lastIndex>=1}}'></view>
+   <view class="nav_item nav_itemx" wx-if='{{lastIndex>=2}}'></view>
+   <view class="nav_item nav_itemx" wx-if='{{lastIndex>=3}}'></view>
+   <view class="nav_item nav_itemx" wx-if='{{lastIndex>=4}}'></view>
+   <view class="nav_item nav_itemx" wx-if='{{lastIndex>=5}}'></view>
+</view> -->
+<view class="resultWrap">
+   <view class="resultLine resultLine1" data-index="{{index}}">
+        <view class="resultLineItem resultLineItem1">部门名称</view>
+        <view class="resultLineItem resultLineItem2">单位名称</view>
+        <view class="resultLineItem resultLineItem4">招录人数</view>
+        <view class="resultLineItem resultLineItem5">查看详情</view>
+   </view>
+   <block wx:for="{{result}}" wx:key="index">
+      <view class="resultLine" data-index="{{index}}"  bindtap="showDetail">
+        <view class="resultLineItem resultLineItem1">{{item.item03}}</view>
+        <view class="resultLineItem resultLineItem2">{{item.item04}}</view>
+        <view class="resultLineItem resultLineItem4">{{item.item06}}</view>
+        <view class="resultLineItem resultLineItem5">
+           <image src="./../../images/btns_bk.png" class="btns"></image>
+        </view>
+      </view>
+   </block>
+</view>
+<view class="page_cover" hidden="{{!detailShow}}"></view>
+<view class="cover_con"  hidden="{{!detailShow}}">
+   <view class="result_item">
+      <text class="result_code">({{detailText.item01}}年)</text>
+      <text class="result_name">{{detailText.item05}}</text>
+      <text class="result_detail">{{detailText.item03}}>{{detailText.item04}}>{{detailText.item07}}>{{detailText.item05}}</text>
+      <view class="item_group">
+        <view class="item_line"><label>录用计划</label><text>{{detailText.item06?detailText.item06:'无'}}</text></view>
+        <view class="item_line"><label>专业要求</label><text>{{detailText.item09?detailText.item09:'无'}}</text></view>
+        <view class="item_line"><label>学历学位</label><text>{{detailText.item08?detailText.item08:'无'}}</text></view>
+        <view class="item_line"><label>政治面貌</label><text>{{detailText.item11?detailText.item11:'无'}}</text></view>
+        <view class="item_line"><label>性别要求</label><text>{{detailText.item14?detailText.item14:'不限'}}</text></view>
+        <view class="item_line"><label>2年基层工作经验</label><text>{{detailText.item10?detailText.item10:'无'}}</text></view>
+        <view class="item_line"><label>是否组织专业考试</label><text>{{detailText.item12?detailText.item12:'无'}}</text></view>
+        <view class="item_line"><label>其他条件</label><text>{{detailText.item13?detailText.item13:'无'}}</text></view>
+        <view class="item_line item_line_fs" v-if="item.item01!=2020">
+             <label>最低进面分数线</label>
+             <text>{{detailText.item15}}</text>
+        </view>
+      </view>
+      <button class="add_btn {{detailText.isFav?'active':''}}" disabled="{{detailText.isFav}}" bindtap="addAavorites" >
+        {{item.isFav?'已收藏':' +添加到收藏'}}
+      </button>
+    </view>
+    <view class="knowBtns" bindtap="hideDetail">我知道了</view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}' bind:user_login="user_login"></authorization>
+
+<view class="tip_cvover {{showTip?'active':''}}"  hidden="{{!showTip}}">
+  <view class="tip_con">
+     <image src="./../../images/tip_icon1.png" class="close_tip" bindtap="close_tip"></image>
+     <text class="tip_text" bindtap="go_target">已将该职位添加入我的职位</text>
+     <image src="./../../images/tip_icon2.png" class="tip_icon" bindtap="go_target"></image>
+  </view>
+</view>

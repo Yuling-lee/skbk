@@ -1,0 +1,11 @@
+<view class="authorization_wrap"  hidden="{{!isShow}}"></view>
+<view class="authorization_show"  hidden="{{!isShow}}">
+      <view class="authorization_close" bindtap="close_auth">
+         <text class="iconfont icon-guanbi"></text>
+      </view>
+      <button class='phone_baocun'
+          open-type="getPhoneNumber"
+          bindgetphonenumber="bindGetPhoneNumber">
+            <text class="iconfont icon-weixin"></text>微信快捷登录
+     </button>
+</view>

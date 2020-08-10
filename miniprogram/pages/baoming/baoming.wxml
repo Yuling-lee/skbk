@@ -1,0 +1,65 @@
+<navigation id='Navigation' title="报名人数查询"  bgcolor="{{bgcolor}}" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}" navbg="{{navbg}}" class="fix-top" animation="{{fadeAni}}"></navigation>
+<view class="banner_bk"></view>
+<view class="container">
+    <view class="nav_title">
+      <image src="./../../images/bm_title.png"></image>
+    </view>
+    <view class="zw_them">数据仅为参考，具体以官方公布为准</view>
+    <view class="select_wrap">
+      <!-- 地区选择 -->
+      <view class="offer_item">
+        <picker bindchange="bindAreaPickerChange" value="{{index}}" range="{{addr}}">
+          <text class="iconfont icon-dizhi icon_title"></text>
+          <view class='picker'> {{index?addr[index]:'请选择地区或部门'}}</view>
+          <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+          <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+        </picker>
+      </view>
+      <!-- 单位选择 -->
+      <view class="offer_item">
+        <picker bindchange="bindDwPickerChange" value="{{indexs}}" range="{{danwei}}">
+          <text class="iconfont icon-zhengzhi-tianchong icon_title"></text>
+          <view class='picker'> {{indexs?danwei[indexs]:'请选择单位'}}</view>
+          <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+          <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+        </picker>
+      </view>
+      <!-- 岗位选择 -->
+      <view class="offer_item">
+        <picker bindchange="bindgwPickerChange" value="{{indexv}}" range="{{gangwei}}">
+          <text class="iconfont icon-icon1 icon_title"></text>
+          <view class='picker'> {{indexv?gangwei[indexv]:'请选择岗位'}}</view>
+          <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+          <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+        </picker>
+      </view>
+      <view class='offer_item'>
+        <button class="search_btn" bindtap="seach_result">点击查询</button>
+      </view>
+    </view>
+
+    <view class="view_table_tit">
+        <text class="iconfont icon-rili"></text>
+        <text class="text_tit">2019和2020重庆市考报名人数对比</text>
+    </view>
+    <image class="view_table_img" src='{{img_url}}'></image>
+    <view class="view_table_tit">
+        <text class="iconfont icon-search"></text>
+        <text class="text_tit">2020重庆市考各区县报名人数</text>
+    </view>
+    <view class="view_table">
+      <view class="resulttr">
+            <view class="resultitem th">地区</view>
+            <view class="resultitem th">人数</view>
+            <view class="resultitem th">地区</view>
+            <view class="resultitem th">人数</view>
+      </view>
+      <view class="resulttr" wx:for="{{bmrs}}" wx:key="index">
+        <view class="resultitem first">{{item.item01}}</view>
+        <view class="resultitem">{{item.item02}}</view>
+        <view class="resultitem first">{{item.item03}}</view>
+        <view class="resultitem last">{{item.item04}}</view>
+      </view>
+    </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>

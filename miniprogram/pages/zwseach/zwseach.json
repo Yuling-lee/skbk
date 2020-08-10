@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "select": "/components/select/select",
+    "select-earch": "/components/selectSearch/selectSearch",
+    "navigation": "/components/navigation/navigation",
+    "authorization": "/components/authorization/authorization" 
+  },
+  "navigationBarTextStyle": "white"
+}
