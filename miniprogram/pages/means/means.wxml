@@ -1,34 +1,22 @@
 <!--pages/means/means.wxml-->
 <navigation id='Navigation' title="资料详情" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
-<image src="./../../images/banner_bk.png" class="banner_bk"></image>
+<image src="./../../images/banner_bk1.png" class="banner_bk"></image>
 <image src="./../../images/means_title.png" class="means_title"></image>
 <view class="book_wrap">
-   <view class="book_wrap_title">备考资料</view>
-   <view class="hot_list">
-      <view class="hot_item" wx:for="{{book_list}}" wx:key="index"  bindtap="addbook" data-index="{{index}}" data-isfav="{{item.isFav}}" data-readurl="{{item.bookurl}}">
-         <image src="{{item.picurl}}"></image>
-         <text>{{item.bookname}}</text>
-         <button  class="{{item.isFav?'active':''}}">
-            {{item.isFav?'点击阅读':'加入书架'}}
-         </button>
+   <view wx:for="{{book_list}}" wx:key="index">
+      <view class="book_wrap_title">{{item.book_type}}</view>
+      <view class="hot_list">
+         <view class="hot_item" wx:for="{{item.book_list}}" wx:key="index" bindtap="addbook" data-index="{{item.bookid}}" data-isfav="{{item.isFav}}" data-readurl="{{item.bookurl}}">
+            <image src="{{item.picurl}}"></image>
+            <text>{{item.bookname}}</text>
+            <button  class="{{item.isFav?'active':''}}">
+               {{item.isFav?'点击阅读':'加入书架'}}
+            </button>
+         </view>
       </view>
    </view>
 </view>
 
-<!-- <view class="course_wrap">
-   <image src="./../../images/wx_icon.png" class="course_title_icon"></image>
-   <view class="course_wrap_title">精品网课</view>
-   <view class="course_con"  bindtap="copyText" data-text="{{copyUrl}}">
-      <view class="course_left">
-        <image src="./../../images/wx_pic.png"></image>
-      </view> 
-      <view class="course_right">
-         <view>① 视频课程在3个工作日内开通至您的手机账号中。</view>
-         <view>② 开通后登录中公网校或下载中公网校APP听课。</view>
-         <view>③如有疑问，可以加陕西省考Q群<text>{{copytext}}</text>咨询管理</view>
-      </view>
-   </view>
-</view> -->
 <authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
 
 <view class="tip_cvover {{showTip?'active':''}}" hidden="{{!showTip}}">

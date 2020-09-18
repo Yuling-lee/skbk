@@ -8,12 +8,16 @@ Page({
   data: {
     title: '',
     isShowAuth: false,
-    gg_list: [],
     zb_list: [],
     nowindex: 0,
-    hdlx: "首页"
+    hdlx: "首页",
+    interval:4000,
+    duration: 800,
+    imgUrls: [],
+    navlist:[]
   },
   onLoad: function (options) {
+
     this.setData({
       userInfo: wx.getStorageSync('userInfo')
     })
@@ -33,8 +37,9 @@ Page({
     db.collection('gg_list').get({
       success: res => {
         this.setData({
-          gg_list: res.data[0].gg_list,
-          zb_list: res.data[1].zb_list
+          zb_list: res.data[1].zb_list,
+          imgUrls: res.data[5].bannerlist,
+          navlist: res.data[6].navlist,
         })
         clearInterval(ggtimer)
         let num = this.data.gg_list.length;
@@ -52,6 +57,7 @@ Page({
         })
       }
     })
+    
   },
   onHide() {
     clearInterval(ggtimer)
@@ -104,11 +110,17 @@ Page({
       })
     }
   },
+  goRead: function (event){
+    const url = event.currentTarget.dataset.url
+    wx.navigateTo({
+      url: '/pages/read/read?readurl=' + url
+    })
+  },
   gozb: function (event) {
     const url = event.currentTarget.dataset.url
     if (this.data.userInfo.isLoaded) {
       wx.navigateToMiniProgram({
-        appId: 'wx9bcafde87fc4431c',
+        appId: 'wxca86930ec3e80717',
         path: url,
         envVersion: 'release'
       })
@@ -147,7 +159,7 @@ Page({
         });
       } else {
         wx.navigateToMiniProgram({
-          appId: 'wx9bcafde87fc4431c',
+          appId: 'wxca86930ec3e80717',
           path: planUrl,
           envVersion: 'release'
         })
@@ -156,7 +168,7 @@ Page({
   },
   onPageScroll: function (t) {
     if (t.scrollTop >= app.globalData.titleBarHeight) {
-      this.setData({ bgcolor: "#d32423", title: '首页' })
+      this.setData({ bgcolor: "#e3251d", title: '首页' })
       app.fadeInOut(this, 'fadeAni', 1)
     } else {
       this.setData({ bgcolor: "", title: '' })
@@ -166,7 +178,7 @@ Page({
   onShareAppMessage: function (res) {
     var that = this;
     return {
-      title: "2020重庆公务员考试公告已发布，立即查看！",
+      title: "2020重庆公务员考试考前白皮书，点击领取！",
       path: "/pages/index/index?source=" + wx.getStorageSync('source'),
       success: function (res) {
         console.log(res, "转发成功")

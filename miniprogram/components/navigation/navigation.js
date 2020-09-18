@@ -4,7 +4,7 @@ Component({
     //小程序页面的表头
     title: {
       type: String,
-      default: '重庆市考职位筛选'
+      default: '重庆省考百科'
     },
     wordcolor:{
       type: String,

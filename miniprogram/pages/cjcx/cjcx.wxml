@@ -1,0 +1,7 @@
+<!--bmseach.wxml-->
+<navigation id='Navigation' title="" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="container"></view>
+<view class="btn_cover">
+  <button class="btn_yy" bindtap="yuyue_result" hidden="{{isyuyue}}">点击预约出成绩后短信提醒<image src="./../../images/tip_icon2.png"></image></button>
+  <button class="btn_yy" hidden="{{!isyuyue}}">您已预约成绩短信通知</button>
+</view>

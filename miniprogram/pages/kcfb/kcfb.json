@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "select": "/components/select/select",
+    "navigation": "/components/navigation/navigation",
+    "authorization": "/components/authorization/authorization" 
+  },
+  "navigationBarTextStyle": "white"
+}

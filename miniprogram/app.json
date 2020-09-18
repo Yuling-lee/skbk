@@ -5,7 +5,6 @@
     "pages/zwseach/zwseach",
     "pages/result/result",
     "pages/means/means",
-    "pages/shenlun/shenlun",
     "pages/read/read",
     "pages/library/library",
     "pages/myposition/myposition",
@@ -13,8 +12,10 @@
     "pages/ggread/ggread",
     "pages/bmseach/bmseach",
     "pages/baoming/baoming",
-    "pages/bmread/bmread",
-    "pages/bmresult/bmresult"
+    "pages/bmresult/bmresult",
+    "pages/deposit/deposit",
+    "pages/cjcx/cjcx",
+    "pages/kcfb/kcfb"
   ],
   "window": {
     "navigationStyle": "custom",
@@ -43,6 +44,6 @@
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
     "wx63ad0fa9a5b1e3fb",
-    "wx9bcafde87fc4431c"
+    "wxca86930ec3e80717"
   ]
 }

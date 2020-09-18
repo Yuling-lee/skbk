@@ -58,15 +58,15 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/means/means",
-					"pathName": "pages/means/means",
-					"query": "",
+					"name": "pages/index/index?scene=123",
+					"pathName": "pages/index/index",
+					"query": "scene=123",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "pages/zwseach/zwseach",
-					"pathName": "pages/zwseach/zwseach",
+					"name": "pages/kcfb/kcfb",
+					"pathName": "pages/kcfb/kcfb",
 					"query": "",
 					"scene": null
 				},
@@ -120,9 +120,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/picture/picture",
-					"pathName": "pages/picture/picture",
+					"id": 9,
+					"name": "pages/firing/firing",
+					"pathName": "pages/firing/firing",
 					"query": "",
 					"scene": null
 				},

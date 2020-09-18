@@ -1,13 +1,14 @@
 page{
-  background: #f2f2f2;
+  background: #fff;
 }
 .banner_bk{
   width:750rpx;
-  height:360rpx;
+  height:320rpx;
   position:absolute;
   left:0;
   top:0;
   z-index:-1;
+  background-color: #e3251d ;
 }
 .banner_logo{
   display:block;
@@ -17,6 +18,44 @@ page{
   position: absolute;
   left:0;
   top:5%;
+}
+.swiperBanner{
+  width:722rpx;
+  height:295rpx !important;
+  margin:20rpx auto 0;
+}
+.swiperBanner image{
+  width:100%;
+  height:295rpx !important;
+  
+}
+.swiperBanner swiper{
+  width:100%;
+  height:295rpx !important;
+}
+.bannerNav{
+  width: 700rpx;
+  margin: 0 auto 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.navitem{
+  width:25%;
+  text-align:center;
+  margin-top: 30rpx;
+}
+.navitem image{
+  width: 99rpx;
+  height: 99rpx;
+}
+.navitem text{
+  display:block;
+  margin-top: 5rpx;
+  font-size:24rpx;
+  text-align: center;
 }
 .banner_pic{
   width:722rpx;
@@ -28,96 +67,33 @@ page{
   width:722rpx;
   height:100rpx;
   display:block;
-  margin:17rpx auto 20rpx;
+  margin:0 auto 20rpx;
 }
 
-.banner_mokao{
-  width:678rpx;
-  height:194rpx;
-  display:block;
-  margin:20rpx auto;
-}
-
-.gg_wrap{
-  background: #fff;
-  border-radius:12rpx;
-  width:700rpx;
-  height:337rpx;
-  -moz-box-shadow:0rpx 0rpx 7rpx #d6d7d3;
-  -webkit-box-shadow:0rpx 0rpx 7rpx #d6d7d3;
-  box-shadow:0rpx 0rpx 7rpx #d6d7d3;
-  margin:0 auto;
-  display: flex;
-  display:-webkit-flex;
-  justify-content: space-between;
-}
-.gg_wrap .gg_left{
-  width:344rpx;
-  height:302rpx;
-  margin-left:17rpx;
-  padding-top:20rpx;
-}
-.gg_wrap .gg_left image{
-  width:344rpx;
-  height:302rpx;
-}
-.gg_right{
-  width:305rpx;
-  height:302rpx;
-  padding-top:20rpx;
-  margin-left:17rpx;
-  margin-right:17rpx;
-}
-.gg_right image{
-  width:305rpx;
-  height:142rpx;
-}
-.gg_right image.right_img1{
-  padding-bottom: 12rpx;
-}
-.download_wrap{
-  padding-top:20rpx;
-}
 .download_pic{
   width:678rpx;
-  height:359rpx;
+  height:301rpx;
   display:block;
-  margin:0 auto;
-  border-radius:10rpx;
+  margin-left:-28rpx;
 }
-.notice_pic{
-  width:678rpx;
-  height:275rpx;
-  display:block;
-  margin:0 auto;
-  padding-bottom:5rpx;
-  border-radius:10rpx;
-}
-.notice_picx{
-  width:678rpx;
-  height:194rpx;
-  display:block;
-  margin:0 auto;
-  padding-bottom:20rpx;
-  border-radius:10rpx;
-}
+
 .ggwrap{
-  padding-bottom: 20rpx;
+  padding-bottom: 30rpx;
+  padding-top:20rpx;
+  background: #f2f2f2;
 }
 .ggwrap.active{
   background:url(http://cq.offcn.com/zg/images/wrap_bk.png) no-repeat center top;
    background-size: 702rpx 1144rpx;
    padding-top:83rpx;
 }
-
-
 .ggzq{
-  width:600rpx;
+  width:622rpx;
   background: #fff;
-  margin:0 auto;
-  padding:40rpx 40rpx 10rpx 40rpx;
+  margin:30rpx auto 0;
+  padding:40rpx 40rpx 20rpx 40rpx;
   border-radius:10rpx;
-  margin-bottom:20rpx;
+  box-shadow: 0px 0px 14rpx #ddd;
 }
 .ggwrap .ggzq_title{
   height:36rpx;
@@ -166,13 +142,13 @@ page{
   border:none;
 }
 
-
 .jrzb{
-  width:600rpx;
+  width:622rpx;
   background: #fff;
   margin:0 auto;
   padding:40rpx 40rpx 20rpx 40rpx;
   border-radius:10rpx;
+  box-shadow: 0px 0px 14rpx #ddd;
 }
 .jrzb .jrzb_title{
   height:36rpx;
@@ -200,6 +176,7 @@ page{
 .jrzb_item{
   height:28rpx;
   margin-bottom:30rpx;
+  display: flex;
   display:-webkit-flex;
   justify-content: space-between;
   line-height:28rpx;
@@ -237,4 +214,17 @@ page{
   height:31rpx;
   position: relative;
   top:-5rpx;
+}
+.sktyk{
+  width:702rpx;
+  margin:30rpx auto 0;
+  display: flex;
+  display:-webkit-flex;
+  justify-content: space-between;
+}
+.sktyk image{
+  width: 341rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  box-shadow: 0px 0px 14rpx #ddd;
 }

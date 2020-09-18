@@ -1,0 +1,19 @@
+/**bmseach.wxss**/
+button {
+  background: none;
+  outline: none;
+  border: 0;
+}
+button::after{border-width:0;}
+page{
+  background: #911718;
+}
+.container{
+  position: fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  background:url(https://sahd.offcn.com/cq/skbk/deposit.jpg) no-repeat center top;
+  background-size:750rpx 1334rpx;
+}

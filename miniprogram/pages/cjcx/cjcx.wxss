@@ -1,0 +1,46 @@
+/**bmseach.wxss**/
+button {
+  background: none;
+  outline: none;
+  border: 0;
+}
+button::after{border-width:0;}
+page{
+  background: #eb2405;
+}
+.container{
+  position: fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  background:url(https://sahd.offcn.com/cq/skbk/cjcx.jpg) no-repeat center top;
+  background-size:750rpx 1442rpx;
+}
+.btn_cover{
+  position: absolute;
+  background: rgb(0,0,0,0.3);
+  height: 180rpx;
+  width: 100%;
+  bottom:0;
+  z-index: 2;
+}
+.btn_yy {
+  display: block;
+  width: 660rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  border-radius:10rpx;
+  margin:45rpx auto 0;
+  background:#d32423;
+  color: #fff;
+  font-size: 34rpx;
+  position: relative;
+}
+.btn_yy image{
+  width: 22rpx;
+  height: 38rpx;
+  right: 30rpx;
+  top: 26rpx;
+  position: absolute;
+}

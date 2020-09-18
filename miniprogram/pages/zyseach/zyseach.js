@@ -132,6 +132,11 @@ Page({
       app.fadeInOut(this, 'fadeAni', 0)
     }
   },
+  user_login() {
+    this.setData({
+      userInfo: wx.getStorageSync('userInfo')
+    })
+  },
   go_zwk: function (event) {
     const url = event.currentTarget.dataset.url
     if (this.data.userInfo.isLoaded) {

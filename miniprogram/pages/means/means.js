@@ -10,6 +10,7 @@ Page({
     showIcon: true,
     bgcolor:'',
     book_list: [],
+    book_lists:[],
     showTip: false,
     isFirst: true,
     hdlx:'图书'
@@ -27,12 +28,10 @@ Page({
       title: '加载中'
     });
     const db = wx.cloud.database()
-    db.collection('book_list').where({
-      groupid:actid
-    }).get({
+    db.collection('book_list').get({
       success: res => {
         this.setData({
-          book_list: res.data[0].book_list
+          book_list:res.data
         },()=>{
           this.init_result();
         });
@@ -80,21 +79,26 @@ Page({
             alerdyList = res.data[0]
             let now_list = this.data.book_list
             let fav_list = alerdyList.book_list
+            let newbook = []
             for (var i = 0; i < now_list.length; i++) {
-              let isSwitch = true;
-              for (var k = 0; k < fav_list.length; k++) {
-                if (now_list[i].bookid == fav_list[k].bookid) {
-                  now_list[i].isFav = true
-                  isSwitch = false
-                  break;
+              for(var j = 0; j < now_list[i].book_list.length; j++){
+                let isSwitch = true;
+                newbook.push(now_list[i].book_list[j])
+                for (var k = 0; k < fav_list.length; k++) {
+                  if (now_list[i].book_list[j].bookid == fav_list[k].bookid) {
+                    now_list[i].book_list[j].isFav = true
+                    isSwitch = false
+                    break;
+                  }
                 }
-              }
-              if (isSwitch) {
-                now_list[i].isFav = false
+                if (isSwitch) {
+                  now_list[i].book_list[j].isFav = false
+                }
               }
             }
             this.setData({
               book_list: now_list,
+              book_lists: newbook,
               isFirst: false
             })
           } else {
@@ -184,7 +188,7 @@ Page({
   },
   onPageScroll: function (t) {
     if (t.scrollTop >= app.globalData.titleBarHeight) {
-      this.setData({ bgcolor: "#d32423" })
+      this.setData({ bgcolor: "#d32002" })
       app.fadeInOut(this, 'fadeAni', 1)
     } else {
       this.setData({ bgcolor: "" })
@@ -214,7 +218,13 @@ Page({
       })
       return;
     }
-    const now_json = this.data.book_list[event.currentTarget.dataset.index]
+
+    let now_json = []
+    for(var n=0;n<this.data.book_lists.length;n++){
+      if(this.data.book_lists[n].bookid == event.currentTarget.dataset.index){
+        now_json = this.data.book_lists[n]
+      }
+    }
     wx.showLoading({
       mask: true,
       title: '添加中.....'
@@ -234,21 +244,26 @@ Page({
         success: res => {
           let now_list = this.data.book_list
           let fav_list = alerdyList.book_list
+          let newbook = []
           for (var i = 0; i < now_list.length; i++) {
-            let isSwitch = true;
-            for (var k = 0; k < fav_list.length; k++) {
-              if (now_list[i].bookid == fav_list[k].bookid) {
-                now_list[i].isFav = true
-                isSwitch = false
-                break;
+            for(var j = 0; j < now_list[i].book_list.length; j++){
+              let isSwitch = true;
+              newbook.push(now_list[i].book_list[j])
+              for (var k = 0; k < fav_list.length; k++) {
+                if (now_list[i].book_list[j].bookid == fav_list[k].bookid) {
+                  now_list[i].book_list[j].isFav = true
+                  isSwitch = false
+                  break;
+                }
               }
-            }
-            if (isSwitch) {
-              now_list[i].isFav = false
+              if (isSwitch) {
+                now_list[i].book_list[j].isFav = false
+              }
             }
           }
           this.setData({
             book_list: now_list,
+            book_lists: newbook,
             showTip: true
           })
           wx.showToast({

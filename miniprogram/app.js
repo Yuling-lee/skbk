@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function (options) {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -11,7 +11,7 @@ App({
         //   如不填则使用默认环境（第一个创建的环境）
         env: 'cqzgjy-yy1bgwy-135tv',
         traceUser: true
-      })
+      }) 
     }
     var that = this;
     this.db = wx.cloud.database()

@@ -26,14 +26,14 @@ exports.main = async (event) => {
   let returnInfo = ''
   try {
     // 查询有没用户数据
-    const user = await db.collection('users').where({
+    const user = await db.collection('users1').where({
       _openid: OPENID
     }).get()
     // 如果有数据，则只是更新 `session_key`，如果没数据则添加该用户并插入 `sesison_key`
     if (user.data.length) {
       user.session_key = info.session_key
       returnInfo = user
-      await db.collection('users').where({
+      await db.collection('users1').where({
         _openid: OPENID
       }).update({
         data: {
@@ -41,7 +41,7 @@ exports.main = async (event) => {
         }
       })
     } else {
-      await db.collection('users').add({
+      await db.collection('users1').add({
         data: {
           session_key: info.session_key,
           _openid: OPENID

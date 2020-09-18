@@ -124,7 +124,7 @@ Page({
   },
   onPageScroll: function (t) {
     if (t.scrollTop >= app.globalData.titleBarHeight) {
-      this.setData({ bgcolor: "#d32423" })
+      this.setData({ bgcolor: "#d32002" })
       app.fadeInOut(this, 'fadeAni', 1)
     } else {
       this.setData({ bgcolor: "" })

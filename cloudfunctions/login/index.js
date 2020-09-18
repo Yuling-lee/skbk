@@ -14,7 +14,7 @@ exports.main = async (event) => {
   } = cloud.getWXContext()
 
   const db = cloud.database()
-  const users = await db.collection('users').where({
+  const users = await db.collection('users1').where({
     _openid: OPENID
   }).get()
 
@@ -32,7 +32,7 @@ exports.main = async (event) => {
   const expireTime = Date.now() + duration
 
   try {
-    const result = await db.collection('users').where({
+    const result = await db.collection('users1').where({
       _openid: OPENID
     }).update({
       data: {

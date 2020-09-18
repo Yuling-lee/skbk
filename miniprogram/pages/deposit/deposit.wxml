@@ -1,0 +1,3 @@
+<!--bmseach.wxml-->
+<navigation id='Navigation' title="" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}"  bgcolor="{{bgcolor}}" animation="{{fadeAni}}"></navigation>
+<view class="container" bindtap="gozb"></view>

@@ -5,7 +5,7 @@ page{
 }
 .banner_bk{
   width:750rpx;
-  height:24%;
+  height:400rpx;
   position: absolute;
   left:0;
   top:0;
@@ -26,13 +26,25 @@ page{
   padding:35rpx 35rpx 0 35rpx;
 }
 .book_wrap_title{
-  border-left:6rpx solid #333333;
   height:32rpx;
   line-height:32rpx;
-  font-size:28rpx;
-  padding-left:15rpx;
+  font-size:32rpx;
+  padding:10rpx 0 20rpx 35rpx;
   margin-bottom:20rpx;
   font-weight:bold;
+  position: relative;
+  border-bottom: 2rpx solid #d3d3d3;
+}
+.book_wrap_title::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 16rpx solid transparent;
+  border-top: 16rpx solid transparent;
+  border-left: 20rpx solid #d32002;
+  position: absolute;
+  top: 10rpx;
+  left: 0rpx;
 }
 .hot_list{
   width:640rpx;
@@ -70,7 +82,7 @@ page{
 .hot_list .hot_item button{
   display:block;
   padding:0;
-  background:#d32423;
+  background:#d32002;
   width:170rpx;
   font-size:26rpx;
   height:51rpx;
@@ -86,7 +98,7 @@ page{
   background: none;
 }
 .hot_list .hot_item button.active{
-  background:#9d0f0e;
+  background:#aa0202;
   color: #fff;
 }
 
@@ -142,7 +154,7 @@ page{
 .course_right view text{
   display: inline-block;
   margin:0 5rpx;
-  color: #d32423;
+  color: #d32002;
   font-weight:bold;
 }
 
@@ -164,7 +176,7 @@ page{
 .tip_cvover .tip_con{
   width:700rpx;
   height:92rpx;
-  background: #d32423;
+  background: #d32002;
   margin:0 auto;
   border-radius:15rpx;
   margin-top:66rpx;

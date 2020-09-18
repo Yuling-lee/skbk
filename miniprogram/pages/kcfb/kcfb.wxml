@@ -1,0 +1,61 @@
+<navigation id='Navigation' title="考场分布查询"  bgcolor="{{bgcolor}}" showIcon='{{showIcon}}' wordcolor="#fff"  show-title="{{true}}" navbg="{{navbg}}" class="fix-top" animation="{{fadeAni}}"></navigation>
+<image src="./../../images/banner_bk1.png" class="banner_bk"></image>
+<view class="container">
+    <view class="nav_title">
+      <image src="./../../images/ks_title.png"></image>
+    </view>
+    <view class="zw_them">
+       根据收集信息整理，如有遗漏请联系工作人员
+    </view>
+    <view class="select_wrap">
+      <!-- 地区选择 -->
+      <view class="offer_item">
+        <picker bindchange="bindAreaPickerChange" value="{{index}}" range="{{diquList}}">
+          <text class="iconfont icon-dizhi icon_title"></text>
+          <view class='picker'> {{index?diquList[index]:'请选择地区'}}</view>
+          <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+          <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+        </picker>
+      </view>
+      <!-- 单位选择 -->
+      <view class="offer_item">
+        <picker bindchange="bindDwPickerChange" value="{{indexs}}" range="{{schoollist}}">
+          <text class="iconfont icon-xueli1 icon_title"></text>
+          <view class='picker'> {{indexs?schoollist[indexs]:'请选择学校'}}</view>
+          <image src='/images/jt.png'  class='select_img' hidden="{{isActive}}"></image>
+          <image src='/images/jt_1.png'  class='select_img' hidden="{{!isActive}}"></image>
+        </picker>
+      </view>
+      <view class='offer_item' >
+        <button class="search_btn" bindtap="seach_result">点击查询</button>
+      </view>
+      <view class="tip_show">
+        <view class="tip_title">
+            <text class="iconfont icon-jurassic_message"></text>特别说明
+        </view>
+        <view class="tip_detail">
+          本系统根据各考场已发布的<text>考场分布图</text>进行整理，如有遗漏请联系工作人员或是考点单位咨询!
+        </view>
+      </view>
+    </view>
+    
+    <view class="result_list">
+      <block wx:for="{{result}}" wx:key="index">
+        <view class="result_item">
+          <text class="result_code">地区：{{item.diqu}}</text>
+          <text class="result_code">学校名称：{{item.school}}</text>
+          <view class="img_tips" wx:if="{{item.kcimg == ''}}">
+            <image class="load_image" src='./../../images/load.png'></image>
+          </view>
+          <view class="img_tips" wx:else="{{item.kcimg}}">
+            <image class="kc_img" src='{{item.kcimg}}' data-imgsrc='{{item.kcimg}}' bindtap='preview_img'></image>
+            <button class="add_btn" data-src='{{item.kcimg}}' bindtap="bindseaveimage">
+            点击下载
+            </button>
+          </view>
+        </view>
+      </block>
+    </view>
+</view>
+<authorization isShow='{{isShowAuth}}' source='{{source}}' hdlx='{{hdlx}}'  bind:user_login="user_login"></authorization>
+
